@@ -57,9 +57,7 @@ def upload():
 
     except Exception as e:
         return jsonify({"status": "error", "message": str(e)}), 500
-@app.route("/files")
-def list_files():
-    return {"files": os.listdir("uploads")}
+
 
 # ✅ DATABASE FUNCTION
 def save_to_db(name, email, utr, ieee_path, screenshot_path):
@@ -84,7 +82,13 @@ def save_to_db(name, email, utr, ieee_path, screenshot_path):
 
     conn.commit()
     conn.close()
-
+@app.route("/files")
+def list_files():
+    try:
+        files = os.listdir("uploads")
+        return {"files": files}
+    except Exception as e:
+        return {"error": str(e)}
 
 # ✅ RUN SERVER
 if __name__ == "__main__":
