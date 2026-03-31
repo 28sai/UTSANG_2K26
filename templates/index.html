@@ -1,0 +1,1460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UTSANG 2K26 - Official Registration</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" href="https://sac.ieeehyd.org/images/SN_Logo_Circular.png" type="image/png">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Montserrat:ital,wght@0,400;0,600;0,800;1,900&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        /* =========================================
+           PREMIUM DARK THEME VARIABLES
+           ========================================= */
+        :root {
+            --bg-dark: #020617;
+            --glass-bg: rgba(15, 23, 42, 0.65);
+            --glass-border: rgba(255, 255, 255, 0.08);
+            
+            --clr-primary: #0ea5e9; /* Cyan / Bright Blue */
+            --clr-primary-light: #38bdf8;
+            --clr-primary-dark: #0369a1;
+            --clr-ice: #e0f2fe;
+            --clr-accent: #fbbf24; /* Golden Orange */
+            
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            
+            --font-main: 'Montserrat', sans-serif;
+            --font-serif: 'Playfair Display', serif;
+            --font-script: 'Dancing Script', cursive;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-main);
+            color: var(--text-main);
+            background-color: var(--bg-dark);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            overflow-x: hidden;
+            position: relative;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* =========================================
+           CSS GRAPHICS: ARCHITECTURAL BACKGROUND
+           ========================================= */
+        .css-bg-layer {
+            position: fixed;
+            top: 0; left: 0; width: 100vw; height: 100vh;
+            z-index: -3;
+            /* Dark frosted glass overlay over the background image */
+            background-image: 
+                linear-gradient(to bottom, rgba(2, 6, 23, 0.85), rgba(15, 23, 42, 0.95)),
+                url('https://scontent-maa3-2.xx.fbcdn.net/v/t39.30808-6/513023259_23889933297332261_7306798320354812086_n.jpg?stp=dst-jpg_p180x540_tt6&_nc_cat=110&ccb=1-7&_nc_sid=7b2446&_nc_ohc=0f7cQpRBGucQ7kNvwEB6GwY&_nc_oc=AdoRpAd-ekUDTOFFl5-2yi0O4nN3ymS-rJczk_k4lwQLW-4RR-vFJAJjEfHs9BQ95YM&_nc_zt=23&_nc_ht=scontent-maa3-2.xx&_nc_gid=k5TCqR7JqZXRAQj-7Nf2Kw&_nc_ss=7a389&oh=00_Afxi6ivgM-W7NmD0IRS4vP_xUfrSNvF9wz6QoEXdLnecXQ&oe=69D02D30');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        /* Pure CSS Snow/Sparkle Effect - Enhanced for dark mode */
+        .snowflakes {
+            position: fixed;
+            top: 0; left: 0; width: 100vw; height: 100vh;
+            z-index: -2;
+            pointer-events: none;
+            background-image: 
+                radial-gradient(circle at 20% 30%, rgba(255,255,255,0.8) 2px, transparent 2px),
+                radial-gradient(circle at 80% 10%, rgba(255,255,255,0.6) 3px, transparent 3px),
+                radial-gradient(circle at 40% 80%, rgba(255,255,255,0.9) 1.5px, transparent 1.5px),
+                radial-gradient(circle at 70% 60%, rgba(255,255,255,0.5) 2.5px, transparent 2.5px),
+                radial-gradient(circle at 10% 90%, rgba(255,255,255,0.7) 2px, transparent 2px);
+            background-size: 150px 150px;
+            animation: snowFall 25s linear infinite;
+            opacity: 0.8;
+            filter: drop-shadow(0 0 8px rgba(14, 165, 233, 0.8));
+        }
+
+        @keyframes snowFall {
+            0% { transform: translateY(0px); }
+            100% { transform: translateY(150px); }
+        }
+
+        /* =========================================
+           LAYOUT & CONTAINERS
+           ========================================= */
+        .page-wrapper {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            flex-grow: 1;
+        }
+
+        /* =========================================
+           OFFICIAL HEADER BANNER (Light Glass for Logos)
+           ========================================= */
+        .official-header {
+            /* Kept light so the dark logos are visible, but made it more glassy */
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 60px;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4),
+                        inset 0 0 0 1px rgba(255, 255, 255, 0.5);
+            margin-bottom: 3rem;
+            position: relative;
+            z-index: 10;
+            width: 100%;
+            max-width: 1100px;
+        }
+
+        .logo-group {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 2rem;
+            flex: 1;
+        }
+
+        .logo-group.left {
+            padding-right: 4.5rem; /* Creates safe space for the center badge */
+        }
+
+        .logo-group.right {
+            padding-left: 4.5rem; /* Creates safe space for the center badge */
+        }
+
+        .org-logo {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            transition: transform 0.3s ease;
+        }
+        
+        .org-logo:hover { transform: scale(1.05); }
+
+        .header-divider {
+            width: 2px;
+            height: 35px;
+            background: linear-gradient(to bottom, transparent, rgba(0,0,0,0.2), transparent);
+        }
+
+        .center-badge {
+            background: white;
+            border: 3px solid var(--clr-primary);
+            border-radius: 50%;
+            width: 90px;
+            height: 90px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3), 0 0 15px rgba(14, 165, 233, 0.4);
+            overflow: hidden;
+            padding: 4px;
+            transition: transform 0.3s ease;
+            z-index: 10;
+        }
+        
+        .center-badge:hover { transform: translate(-50%, -50%) scale(1.1) rotate(5deg); }
+
+        .center-badge img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            border-radius: 50%;
+        }
+
+        /* =========================================
+           HERO SECTION & 3D TYPOGRAPHY
+           ========================================= */
+        .hero {
+            text-align: center;
+            margin-bottom: 4rem;
+            position: relative;
+            z-index: 5;
+            animation: fadeIn 1s ease-out;
+        }
+
+        .subtitle {
+            font-family: var(--font-main);
+            color: #ffffff;
+            font-weight: 900;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            font-size: 1.25rem;
+            margin-bottom: 1.2rem;
+            text-shadow: 0 0 12px var(--clr-primary-light), 0 0 25px var(--clr-primary);
+        }
+
+        .presents {
+            font-family: var(--font-script);
+            color: var(--clr-accent);
+            font-size: 4.5rem;
+            transform: rotate(-3deg);
+            margin-bottom: 0.5rem;
+            text-shadow: 0 4px 15px rgba(251, 191, 36, 0.5), 0 0 20px rgba(251, 191, 36, 0.3);
+        }
+
+        /* 3D Ice Text */
+        .title-3d {
+            font-family: var(--font-main);
+            font-weight: 900;
+            font-style: italic;
+            font-size: clamp(4rem, 12vw, 9.5rem);
+            line-height: 1;
+            margin: 0;
+            padding: 0 20px;
+            
+            /* Gradient Text */
+            background: linear-gradient(180deg, #ffffff 0%, #cce5ff 40%, #0ea5e9 80%, #0369a1 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            
+            /* Enhanced Neon 3D Stroke & Shadows for Dark Mode */
+            filter: 
+                drop-shadow(0px 2px 0px #0369a1)
+                drop-shadow(0px 4px 0px #075985)
+                drop-shadow(0px 6px 0px #0c4a6e)
+                drop-shadow(0px 15px 20px rgba(0, 0, 0, 0.8))
+                drop-shadow(0px 0px 40px rgba(14, 165, 233, 0.6));
+            
+            position: relative;
+            display: inline-block;
+        }
+
+        .congress-badge {
+            display: inline-block;
+            background: rgba(14, 165, 233, 0.1);
+            color: var(--clr-primary-light);
+            font-weight: 800;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            padding: 0.8rem 3rem;
+            border-radius: 50px;
+            margin-top: 1.5rem;
+            font-size: 1.1rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), inset 0 0 0 1px var(--clr-primary);
+            backdrop-filter: blur(5px);
+        }
+
+        /* =========================================
+           CONTENT GRID: DETAILS & FORM
+           ========================================= */
+        .main-content {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 3rem;
+            width: 100%;
+            animation: slideUp 1s ease-out 0.3s backwards;
+        }
+
+        @media (min-width: 1024px) {
+            .main-content {
+                grid-template-columns: 1fr 1.5fr;
+                align-items: start;
+            }
+        }
+
+        /* Dark Glass Cards */
+        .official-card {
+            background: var(--glass-bg);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-radius: 24px;
+            padding: 3rem;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+            position: relative;
+            overflow: hidden;
+            border: 1px solid var(--glass-border);
+        }
+
+        /* Neon top accent */
+        .official-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; height: 4px;
+            background: linear-gradient(90deg, transparent, var(--clr-primary), transparent);
+            box-shadow: 0 0 15px var(--clr-primary);
+        }
+
+        /* Details Section */
+        .details-wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: 2.5rem;
+        }
+
+        .detail-item {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+        .detail-icon {
+            background: rgba(14, 165, 233, 0.1);
+            color: var(--clr-primary-light);
+            width: 70px;
+            height: 70px;
+            border-radius: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            border: 1px solid rgba(14, 165, 233, 0.3);
+            box-shadow: 0 0 20px rgba(14, 165, 233, 0.15);
+        }
+
+        .detail-text h4 {
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 0.3rem;
+        }
+
+        .detail-text h3 {
+            font-size: 1.5rem;
+            color: var(--text-main);
+            font-weight: 800;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+        }
+        
+        .detail-text p {
+            font-weight: 500;
+            color: var(--clr-primary-light);
+        }
+
+        .action-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-top: 0.8rem;
+            padding: 0.4rem 1rem;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--clr-primary-light);
+            background: rgba(14, 165, 233, 0.1);
+            border: 1px solid rgba(14, 165, 233, 0.3);
+            border-radius: 8px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .action-btn:hover {
+            background: var(--clr-primary);
+            color: #fff;
+            box-shadow: 0 0 15px rgba(14, 165, 233, 0.5);
+            transform: translateY(-2px);
+        }
+
+        .hosted-by {
+            text-align: center;
+            margin-top: 1rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--glass-border);
+        }
+
+        .hosted-by p {
+            font-family: var(--font-serif);
+            font-style: italic;
+            font-size: 1.5rem;
+            color: var(--text-muted);
+        }
+
+        .hosted-by span {
+            font-family: var(--font-main);
+            font-weight: 900;
+            color: var(--text-main);
+            font-style: normal;
+            display: block;
+            margin-top: 0.5rem;
+            font-size: 1.8rem;
+        }
+
+        .hosted-by img {
+            margin-top: 1rem;
+            height: 60px;
+            width: auto;
+            object-fit: contain;
+        }
+        
+        /* Contact Info Section - Image Based Layout */
+        .contact-info {
+            text-align: left;
+            margin-top: 1.5rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--glass-border);
+        }
+
+        .contact-info p.section-title {
+            font-family: var(--font-main);
+            font-weight: 800;
+            font-size: 1.1rem;
+            color: var(--text-main);
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .contact-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .contact-person {
+            display: flex;
+            flex-direction: column;
+            background: rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            padding: 1.2rem;
+            border-radius: 16px;
+            transition: transform 0.3s ease, border-color 0.3s ease, background 0.3s ease;
+            gap: 0.6rem;
+        }
+
+        .contact-person:hover {
+            transform: translateY(-2px);
+            border-color: rgba(14, 165, 233, 0.3);
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        .contact-person .name {
+            font-family: var(--font-main);
+            font-weight: 800;
+            color: var(--text-main);
+            font-size: 1.3rem;
+            width: 100%;
+            margin-bottom: 0.2rem;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .person-details {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            gap: 1rem;
+        }
+
+        .person-details .role {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            font-weight: 500;
+            line-height: 1.5;
+            flex: 1;
+        }
+
+        /* Solid Action Button Styling */
+        .contact-phone {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.6rem;
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 800;
+            font-size: 0.95rem;
+            background: linear-gradient(135deg, #10b981, #059669);
+            padding: 0.7rem 1.5rem;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 5px 15px rgba(16, 185, 129, 0.4);
+            transition: all 0.3s ease;
+            white-space: nowrap;
+        }
+
+        .contact-phone i {
+            font-size: 1.1rem;
+            color: #ffffff;
+        }
+
+        .contact-phone:hover {
+            background: linear-gradient(135deg, #059669, #047857);
+            color: #fff;
+            box-shadow: 0 8px 25px rgba(16, 185, 129, 0.6);
+            transform: translateY(-3px);
+        }
+
+        /* =========================================
+           REGISTRATION FORM (Dark Premium)
+           ========================================= */
+        .form-title {
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: var(--text-main);
+            margin-bottom: 0.5rem;
+        }
+        
+        .form-subtitle {
+            color: var(--text-muted);
+            margin-bottom: 2.5rem;
+            font-weight: 500;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        @media (min-width: 600px) {
+            .form-row { grid-template-columns: 1fr 1fr; }
+        }
+
+        .input-control {
+            position: relative;
+        }
+
+        .input-control label {
+            display: block;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--text-muted);
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .input-wrapper {
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+
+        .input-wrapper i {
+            position: absolute;
+            left: 1.2rem;
+            color: #64748b;
+            font-size: 1.1rem;
+            transition: color 0.3s ease;
+        }
+
+        .official-input {
+            width: 100%;
+            padding: 1.2rem 1rem 1.2rem 3.5rem;
+            border: 1px solid var(--glass-border);
+            border-radius: 12px;
+            background: rgba(0, 0, 0, 0.4);
+            font-family: var(--font-main);
+            font-size: 1rem;
+            color: var(--text-main);
+            transition: all 0.3s ease;
+        }
+
+        .official-input::placeholder {
+            color: #475569;
+        }
+
+        .official-input:focus {
+            outline: none;
+            border-color: var(--clr-primary);
+            background: rgba(14, 165, 233, 0.05);
+            box-shadow: 0 0 0 4px rgba(14, 165, 233, 0.15);
+        }
+
+        .official-input:focus + i, .input-wrapper:focus-within i {
+            color: var(--clr-primary-light);
+        }
+
+        select.official-input {
+            appearance: none;
+            cursor: pointer;
+        }
+        
+        select.official-input option {
+            background: var(--bg-dark);
+            color: var(--text-main);
+        }
+
+        .select-arrow {
+            position: absolute;
+            right: 1.2rem;
+            left: auto !important;
+            pointer-events: none;
+            color: #64748b !important;
+        }
+
+        input[type="file"].official-input {
+            padding: 0.95rem 1rem 0.95rem 3.5rem;
+        }
+
+        input[type="file"]::file-selector-button {
+            background: rgba(255, 255, 255, 0.1);
+            color: var(--text-main);
+            border: 1px solid var(--glass-border);
+            padding: 0.4rem 1rem;
+            border-radius: 6px;
+            margin-right: 1rem;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        input[type="file"]::file-selector-button:hover {
+            background: var(--clr-primary);
+            border-color: var(--clr-primary);
+            color: #fff;
+            box-shadow: 0 0 10px rgba(14, 165, 233, 0.4);
+        }
+
+        .youtube-guide-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.6rem;
+            margin-top: 1rem;
+            padding: 0.8rem 1rem;
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: #ff4a4a;
+            background: rgba(255, 0, 0, 0.05);
+            border: 1px solid rgba(255, 0, 0, 0.2);
+            border-radius: 12px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            width: 100%;
+        }
+
+        .youtube-guide-btn i {
+            color: #ff0000;
+            font-size: 1.2rem;
+            text-shadow: 0 0 10px rgba(255, 0, 0, 0.3);
+        }
+
+        .youtube-guide-btn:hover {
+            background: rgba(255, 0, 0, 0.15);
+            border-color: rgba(255, 0, 0, 0.5);
+            color: #ffffff;
+            box-shadow: 0 5px 15px rgba(255, 0, 0, 0.2);
+            transform: translateY(-2px);
+        }
+
+        .fee-summary {
+            background: rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(14, 165, 233, 0.3);
+            border-radius: 12px;
+            padding: 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 1rem;
+            margin-bottom: 2rem;
+            box-shadow: inset 0 0 20px rgba(0,0,0,0.5);
+        }
+
+        .fee-title {
+            font-weight: 700;
+            color: var(--text-muted);
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+        }
+
+        .fee-value {
+            font-weight: 900;
+            color: var(--text-main);
+            font-size: 2rem;
+            transition: color 0.3s, text-shadow 0.3s;
+            text-shadow: 0 0 10px rgba(255,255,255,0.2);
+        }
+
+        .fee-value.discount {
+            color: #10b981; 
+            text-shadow: 0 0 15px rgba(16, 185, 129, 0.4);
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 1.2rem;
+            background: linear-gradient(135deg, var(--clr-primary-dark), var(--clr-primary));
+            color: white;
+            border: none;
+            border-radius: 12px;
+            font-size: 1.2rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 2.5px;
+            cursor: pointer;
+            box-shadow: 0 10px 20px rgba(14, 165, 233, 0.3);
+            transition: transform 0.3s, box-shadow 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 30px rgba(14, 165, 233, 0.5);
+        }
+
+        /* Shine effect */
+        .submit-btn::after {
+            content: '';
+            position: absolute;
+            top: 0; left: -100%;
+            width: 50%; height: 100%;
+            background: linear-gradient(to right, transparent, rgba(255,255,255,0.4), transparent);
+            transform: skewX(-25deg);
+            animation: btnShine 3s infinite;
+        }
+
+        @keyframes btnShine {
+            0%, 50% { left: -100%; }
+            100% { left: 200%; }
+        }
+
+        /* =========================================
+           PAYMENT SECTION SPECIFIC STYLES
+           ========================================= */
+        .bank-details-container {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 1.5rem 2rem;
+            border-radius: 16px;
+            margin: 1.5rem auto;
+            border: 1px solid var(--glass-border);
+            box-shadow: inset 0 0 20px rgba(0,0,0,0.5), 0 10px 25px rgba(0,0,0,0.3);
+            text-align: left;
+        }
+
+        .bank-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.8rem 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            gap: 1rem;
+        }
+
+        .bank-row:last-child {
+            border-bottom: none;
+        }
+
+        .bank-label {
+            color: var(--text-muted);
+            font-weight: 600;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .bank-value {
+            color: var(--text-main);
+            font-weight: 800;
+            font-size: 0.95rem;
+            text-align: right;
+            word-break: break-word;
+        }
+
+        .bank-value.highlight {
+            color: var(--clr-primary-light);
+            font-size: 1.1rem;
+            letter-spacing: 1px;
+            text-shadow: 0 0 8px rgba(14, 165, 233, 0.4);
+        }
+
+        .payment-amount-highlight {
+            font-size: 1.5rem;
+            font-weight: 900;
+            color: var(--clr-primary-light);
+            text-shadow: 0 0 10px rgba(14, 165, 233, 0.4);
+        }
+
+        .error-msg {
+            color: #ef4444;
+            font-size: 0.85rem;
+            margin-top: 0.5rem;
+            display: none;
+            font-weight: 600;
+        }
+
+        /* =========================================
+           OFFICIAL FOOTER
+           ========================================= */
+        .official-footer {
+            width: 100%;
+            background: rgba(15, 23, 42, 0.8);
+            backdrop-filter: blur(10px);
+            padding: 2rem;
+            margin-top: auto;
+            border-top: 1px solid var(--glass-border);
+            display: flex;
+            justify-content: center;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 3rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .footer-link {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            color: var(--text-muted);
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        .footer-link i {
+            color: var(--clr-primary-light);
+            font-size: 1.2rem;
+        }
+
+        .footer-link:hover { color: var(--text-main); }
+
+        /* =========================================
+           ANIMATIONS & MODAL
+           ========================================= */
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+        @keyframes slideUp { from { opacity: 0; transform: translateY(40px); } to { opacity: 1; transform: translateY(0); } }
+
+        .modal-overlay {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(2, 6, 23, 0.8);
+            backdrop-filter: blur(12px);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 100;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .modal-overlay.show {
+            display: flex;
+            opacity: 1;
+        }
+
+        .modal-box {
+            background: #0f172a;
+            padding: 3.5rem 3rem;
+            border-radius: 24px;
+            text-align: center;
+            max-width: 450px;
+            transform: scale(0.9);
+            transition: transform 0.3s;
+            box-shadow: 0 25px 50px rgba(0,0,0,0.5), inset 0 0 0 1px rgba(255,255,255,0.1);
+            border-top: 6px solid #10b981;
+        }
+
+        .modal-overlay.show .modal-box { transform: scale(1); }
+
+        .modal-box i {
+            font-size: 4.5rem;
+            color: #10b981;
+            margin-bottom: 1.5rem;
+            text-shadow: 0 0 20px rgba(16, 185, 129, 0.4);
+        }
+
+        .modal-box.warning-box {
+            border-top-color: var(--clr-accent);
+        }
+
+        .modal-box.warning-box i {
+            color: var(--clr-accent);
+            text-shadow: 0 0 20px rgba(251, 191, 36, 0.4);
+        }
+
+        .modal-box h2 { color: var(--text-main); margin-bottom: 1rem; font-weight: 800; font-size: 1.8rem; }
+        .modal-box p { color: var(--text-muted); margin-bottom: 2.5rem; line-height: 1.6; }
+        
+        .modal-btn {
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1);
+            color: var(--text-main);
+            width: 100%;
+            padding: 1rem;
+            border-radius: 12px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .modal-btn:hover { background: rgba(255,255,255,0.1); }
+
+        .modal-btn.primary-action {
+            background: linear-gradient(135deg, var(--clr-primary-dark), var(--clr-primary));
+            border: none;
+            box-shadow: 0 5px 15px rgba(14, 165, 233, 0.3);
+        }
+
+        .modal-btn.primary-action:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(14, 165, 233, 0.5);
+        }
+
+        /* =========================================
+           MOBILE RESPONSIVENESS 
+           ========================================= */
+        @media (max-width: 900px) {
+            .official-header { 
+                flex-direction: column; 
+                border-radius: 24px; 
+                gap: 1.5rem; 
+                padding: 1.5rem; 
+            }
+            .logo-group { 
+                flex-direction: row; 
+                flex-wrap: wrap; 
+                gap: 1.5rem; 
+                padding: 0 !important; 
+                justify-content: center;
+                width: 100%;
+            }
+            .header-divider { display: none; }
+            .center-badge { 
+                position: relative; 
+                top: auto; left: auto; 
+                transform: none; 
+                width: 80px; height: 80px; 
+            }
+            .center-badge:hover { transform: scale(1.1) rotate(5deg); }
+        }
+
+        @media (max-width: 768px) {
+            .page-wrapper { padding: 1rem; }
+            .subtitle { font-size: 1rem; letter-spacing: 2px; }
+            .presents { font-size: 3.2rem; margin-bottom: 0; }
+            .title-3d { font-size: clamp(3.2rem, 12vw, 5rem); padding: 0; }
+            .congress-badge { font-size: 0.9rem; padding: 0.6rem 1.5rem; }
+            
+            .main-content { gap: 1.5rem; }
+            .official-card { padding: 1.5rem; border-radius: 20px; }
+            
+            .detail-item { flex-direction: column; text-align: center; gap: 1rem; }
+            .action-btn { width: 100%; justify-content: center; }
+            
+            .form-title { font-size: 1.8rem; }
+            .form-subtitle { font-size: 0.95rem; margin-bottom: 1.5rem; }
+            
+            .fee-summary { flex-direction: column; gap: 0.5rem; text-align: center; }
+            
+            .footer-links { flex-direction: column; align-items: center; gap: 1.5rem; }
+            
+            .modal-box { padding: 2.5rem 1.5rem; width: 95%; }
+        }
+
+        @media (max-width: 480px) {
+            .logo-group { flex-direction: column; gap: 1.2rem; }
+            .org-logo img { height: 35px !important; }
+            .hosted-by img { height: 45px; }
+            
+            /* Mobile Contact Layout adjustments to match sketch */
+            .contact-person { padding: 1rem; }
+            .contact-person .name { font-size: 1.1rem; }
+            .person-details { gap: 0.5rem; }
+            .contact-phone { padding: 0.5rem 0.8rem; font-size: 0.8rem; }
+            .person-details .role { font-size: 0.8rem; }
+            
+            /* Bank Details Mobile Stacking */
+            .bank-details-container { padding: 1.2rem; }
+            .bank-row { flex-direction: column; align-items: flex-start; gap: 0.3rem; }
+            .bank-value { text-align: left; }
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- CSS Graphics: Background Elements -->
+    <div class="css-bg-layer"></div>
+    <div class="snowflakes"></div>
+
+    <div class="page-wrapper">
+        
+        <!-- Official Header -->
+        <header class="official-header">
+            <!-- Left Side Logos -->
+            <div class="logo-group left">
+                <div class="org-logo">
+                    <img src="https://sruniv.com/assets/img/sru_logo_half.png" alt="SR University Logo" style="height: 45px; object-fit: contain;">
+                </div>
+                <div class="header-divider"></div>
+                <div class="org-logo">
+                    <img src="SRU_IEEE logo.png" alt="SRU IEEE Student Branch Logo" style="height: 40px; object-fit: contain;">
+                </div>
+            </div>
+            
+            <!-- Absolute Centered Badge -->
+            <div class="center-badge">
+                <img src="https://sac.ieeehyd.org/images/SN_Logo_Circular.png" alt="Student Network Team">
+            </div>
+
+            <!-- Right Side Logos -->
+            <div class="logo-group right">
+                <div class="org-logo">
+                    <img src="https://ieee-vecsb.org/wp-content/uploads/sites/45/1564195213807_HYDSEC-370x128.png" alt="IEEE Hyderabad Section Monument" style="height: 38px; object-fit: contain;">
+                </div>
+                <div class="header-divider"></div>
+                <div class="org-logo">
+                    <img src="https://ieeehyd.org/wp-content/uploads/2023/10/IEEE-HYD-Logo-New.png" alt="IEEE Hyderabad Section Logo" style="height: 35px; object-fit: contain;">
+                </div>
+            </div>
+        </header>
+
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="subtitle">IEEE Hyderabad Section Student Activities Committee</div>
+            <div class="presents">Presents</div>
+            
+            <div style="position: relative;">
+                <h1 class="title-3d">UTSANG 2K26</h1>
+            </div>
+
+            <div class="congress-badge">IEEE Warangal Zonal Congress Registration</div>
+        </section>
+
+        <!-- Main Content Area -->
+        <section class="main-content">
+            
+            <!-- Details Card -->
+            <div class="official-card details-wrapper">
+                <div class="detail-item">
+                    <div class="detail-icon"><i class="fa-regular fa-calendar"></i></div>
+                    <div class="detail-text">
+                        <h4>Event Date</h4>
+                        <h3>11th April 2026</h3>
+                        <p>10:00 AM - 4:00 PM</p>
+                        <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=UTSANG+2K26+-+IEEE+Warangal+Zonal+Congress&dates=20260411T043000Z/20260411T103000Z&details=IEEE+Hyderabad+Section+Student+Activities+Committee+Presents+UTSANG+2K26&location=SR+University,+Warangal,+Telangana" target="_blank" class="action-btn">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Google_Calendar_icon_%282020%29.svg/500px-Google_Calendar_icon_%282020%29.svg.png" alt="Google Calendar" style="height: 14px; width: auto; object-fit: contain;"> Add to Calendar
+                        </a>
+                    </div>
+                </div>
+
+                <div class="detail-item">
+                    <div class="detail-icon"><i class="fa-solid fa-location-dot"></i></div>
+                    <div class="detail-text">
+                        <h4>Location</h4>
+                        <h3>SR University</h3>
+                        <p>Warangal, Telangana</p>
+                        <a href="https://maps.app.goo.gl/g87oTLBp1ydVrn4fA" target="_blank" class="action-btn">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Google_Maps_icon_%282020%29.svg/960px-Google_Maps_icon_%282020%29.svg.png" alt="Google Maps" style="height: 14px; width: auto; object-fit: contain;"> Get Directions
+                        </a>
+                    </div>
+                </div>
+
+                <div class="hosted-by">
+                    <p>Hosted by</p>
+                    <img src="sru_.png" alt="SR University">
+                </div>
+                
+                <div class="contact-info">
+                    <p class="section-title">Event Contacts</p>
+                    <div class="contact-list">
+                        <div class="contact-person">
+                            <div class="name">Dr. A. Chakradhar</div>
+                            <div class="person-details">
+                                <div class="role">Branch<br>Counsellor, SRU<br>IEEE SB</div>
+                                <a href="tel:+919908246759" class="contact-phone">
+                                    <i class="fa-solid fa-phone"></i> <span>99082 46759</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="contact-person">
+                            <div class="name">Vivin Chandrra Paasam</div>
+                            <div class="person-details">
+                                <div class="role">IEEE Hyderabad<br>Section Student<br>Representative</div>
+                                <a href="tel:+919182183950" class="contact-phone">
+                                    <i class="fa-solid fa-phone"></i> <span>91821 83950</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="contact-person">
+                            <div class="name">Vivek Aluvoju</div>
+                            <div class="person-details">
+                                <div class="role">Chair & SN,<br>SRU IEEE SB</div>
+                                <a href="tel:+917702382203" class="contact-phone">
+                                    <i class="fa-solid fa-phone"></i> <span>77023 82203</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Registration Form Card -->
+            <div class="official-card">
+                
+                <!-- STEP 1: REGISTRATION FORM -->
+                <div id="formSection">
+                    <h2 class="form-title">Delegate Registration</h2>
+                    <p class="form-subtitle">Complete the form below to confirm your attendance.</p>
+                    
+                    <form id="registrationForm" enctype="multipart/form-data">
+                        <div class="form-row">
+                            <div class="input-control">
+                                <label>Full Name *</label>
+                                <div class="input-wrapper">
+                                    <i class="fa-regular fa-user"></i>
+                                    <input type="text" class="official-input" placeholder=" " required>
+                                </div>
+                            </div>
+                            <div class="input-control">
+                                <label>Email Address *</label>
+                                <div class="input-wrapper">
+                                    <i class="fa-regular fa-envelope"></i>
+                                    <input type="email" class="official-input" placeholder=" " required>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="input-control">
+                                <label>Phone Number *</label>
+                                <div class="input-wrapper">
+                                    <i class="fa-solid fa-phone"></i>
+                                    <input type="tel" class="official-input" placeholder="+91 XXXXX XXXXX" required>
+                                </div>
+                            </div>
+                            <div class="input-control">
+                                <label>Institution *</label>
+                                <div class="input-wrapper">
+                                    <i class="fa-solid fa-building-columns"></i>
+                                    <input type="text" class="official-input" placeholder="College / University" required>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="input-control">
+                                <label>Membership Status *</label>
+                                <div class="input-wrapper">
+                                    <i class="fa-solid fa-users"></i>
+                                    <select class="official-input" id="membershipStatus" required>
+                                        <option value="" disabled selected>Choose Status</option>
+                                        <option value="non-ieee">Non-IEEE Member</option>
+                                        <option value="ieee">IEEE Member</option>
+                                    </select>
+                                    <i class="fa-solid fa-chevron-down select-arrow"></i>
+                                </div>
+                            </div>
+                            <div class="input-control">
+                                <label>Year of Study *</label>
+                                <div class="input-wrapper">
+                                    <i class="fa-solid fa-graduation-cap"></i>
+                                    <select class="official-input" required>
+                                        <option value="" disabled selected>Select Year</option>
+                                        <option value="1">1st Year</option>
+                                        <option value="2">2nd Year</option>
+                                        <option value="3">3rd Year</option>
+                                        <option value="4">4th Year</option>
+                                        <option value="pg">Post Graduate</option>
+                                    </select>
+                                    <i class="fa-solid fa-chevron-down select-arrow"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-row" id="ieeeIdRow" style="display: none;">
+                            <div class="input-control">
+                                <label>IEEE Member ID *</label>
+                                <div class="input-wrapper">
+                                    <i class="fa-regular fa-id-badge"></i>
+                                    <input type="text" id="ieeeIdInput" class="official-input" placeholder="Enter your 8-digit IEEE ID">
+                                </div>
+                            </div>
+                            <div class="input-control">
+                                <label>Upload Membership Card *</label>
+                                <div class="input-wrapper">
+                                    <i class="fa-solid fa-cloud-arrow-up"></i>
+                                    <input type="file" name="ieee_card" id="ieeeCardInput" class="official-input" accept=".jpg,.jpeg,.png,.pdf">
+                                </div>
+                                <a href="https://youtu.be/I1PdOtNPU-s?si=05csk1I1Xkxx5umW" target="_blank" class="youtube-guide-btn">
+                                    <i class="fa-brands fa-youtube"></i> Tutorial: How to download your IEEE Card
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="fee-summary" id="feeSummaryBox" style="display: none;">
+                            <span class="fee-title">Registration Fee:</span>
+                            <span class="fee-value" id="feeAmountDisplay">₹300</span>
+                        </div>
+
+                        <button type="submit" class="submit-btn">Continue to Payment <i class="fa-solid fa-arrow-right" style="margin-left: 8px;"></i></button>
+                    </form>
+                </div>
+
+                <!-- STEP 2: PAYMENT SECTION (Hidden by default) -->
+                <div id="paymentSection" style="display: none; text-align: center;">
+                    <h2 class="form-title">Complete Payment</h2>
+                    <p class="form-subtitle">Transfer <span class="payment-amount-highlight" id="finalPayAmount">₹300</span> to the following bank account</p>
+                    
+                    <div class="bank-details-container">
+                        <div class="bank-row">
+                            <span class="bank-label">Account Name:</span>
+                            <span class="bank-value">SR UNIVERSITY IEEE STUDENT BRANCH</span>
+                        </div>
+                        <div class="bank-row">
+                            <span class="bank-label">Account No:</span>
+                            <span class="bank-value highlight">120000717972</span>
+                        </div>
+                        <div class="bank-row">
+                            <span class="bank-label">IFSC Code:</span>
+                            <span class="bank-value">CNRB0002450</span>
+                        </div>
+                        <div class="bank-row">
+                            <span class="bank-label">Bank:</span>
+                            <span class="bank-value">Canara Bank</span>
+                        </div>
+                        <div class="bank-row">
+                            <span class="bank-label">Branch:</span>
+                            <span class="bank-value">WARANGAL HANUMAKONDA</span>
+                        </div>
+                    </div>
+
+                    <div style="text-align: left; margin-top: 1rem;">
+                        <div class="input-control">
+                            <label>Transaction ID / UTR Number *</label>
+                            <div class="input-wrapper">
+                                <i class="fa-solid fa-hashtag"></i>
+                                <input type="text" id="utrInput" class="official-input" placeholder="e.g. XXXXXXXXXXXX" required>
+                            </div>
+                            <div class="error-msg" id="utrError">Please enter your 12-digit UTR number.</div>
+                        </div>
+
+                        <div class="input-control" style="margin-top: 1.5rem;">
+                            <label>Upload Payment Screenshot *</label>
+                            <div class="input-wrapper">
+                                <i class="fa-solid fa-image"></i>
+                                <input type="file" name="payment_screenshot" id="paymentScreenshotInput" class="official-input" accept=".jpg,.jpeg,.png,.pdf" required>
+                            </div>
+                            <div class="error-msg" id="screenshotError">Please upload the successful transaction screenshot.</div>
+                        </div>
+                    </div>
+
+                    <div style="display: flex; gap: 1rem; margin-top: 2.5rem;">
+                        <button type="button" class="modal-btn" id="backToFormBtn" style="flex: 1;">Back</button>
+                        <button type="button" class="submit-btn" id="verifyPaymentBtn" style="flex: 2;">Submit Details</button>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+    </div>
+
+    <!-- Footer Area -->
+    <footer class="official-footer">
+        <div class="footer-links">
+            <a href="mailto:ieeesb@sru.edu.in" class="footer-link"><i class="fa-solid fa-envelope"></i> ieeesb@sru.edu.in</a>
+            <a href="https://www.instagram.com/ieee_sru" target="_blank" rel="noopener noreferrer" class="footer-link"><i class="fa-brands fa-instagram"></i> ieee_sru</a>
+            <a href="https://www.linkedin.com/company/sru-ieee/" target="_blank" rel="noopener noreferrer" class="footer-link"><i class="fa-brands fa-linkedin"></i> sru-ieee</a>
+        </div>
+    </footer>
+
+    <!-- Verification Warning Modal -->
+    <div class="modal-overlay" id="warningModal">
+        <div class="modal-box warning-box">
+            <i class="fa-solid fa-triangle-exclamation"></i>
+            <h2>Verify Transaction</h2>
+            <p>Your Transaction ID / UTR number authenticity will be strictly verified by our finance team. Fake or duplicate IDs will lead to instant cancellation.</p>
+            <div style="display: flex; gap: 1rem;">
+                <button class="modal-btn" onclick="closeWarningModal()">Cancel</button>
+                <button class="modal-btn primary-action" onclick="confirmFinalSubmit()">Sure, submit</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Success Modal -->
+    <div class="modal-overlay" id="successModal">
+        <div class="modal-box">
+            <i class="fa-solid fa-circle-check"></i>
+            <h2>Registration Successful</h2>
+            <p>Your details for the Warangal Zonal Congress have been securely recorded. We look forward to seeing you on April 11th at SR University.<br><br>Thank you!</p>
+            <button class="modal-btn" onclick="closeSuccessModal()">Close Window</button>
+        </div>
+    </div>
+
+    <script>
+        // DOM Elements
+        const form = document.getElementById('registrationForm');
+        const formSection = document.getElementById('formSection');
+        const paymentSection = document.getElementById('paymentSection');
+        
+        const successModal = document.getElementById('successModal');
+        const warningModal = document.getElementById('warningModal');
+        
+        const membershipStatus = document.getElementById('membershipStatus');
+        const ieeeIdRow = document.getElementById('ieeeIdRow');
+        const ieeeIdInput = document.getElementById('ieeeIdInput');
+        const ieeeCardInput = document.getElementById('ieeeCardInput');
+        
+        const feeAmountDisplay = document.getElementById('feeAmountDisplay');
+        const feeSummaryBox = document.getElementById('feeSummaryBox');
+        const finalPayAmount = document.getElementById('finalPayAmount');
+        
+        const utrInput = document.getElementById('utrInput');
+        const utrError = document.getElementById('utrError');
+        const paymentScreenshotInput = document.getElementById('paymentScreenshotInput');
+        const screenshotError = document.getElementById('screenshotError');
+        const verifyPaymentBtn = document.getElementById('verifyPaymentBtn');
+        const backToFormBtn = document.getElementById('backToFormBtn');
+
+        // Membership Status Toggle
+        membershipStatus.addEventListener('change', (e) => {
+            feeSummaryBox.style.display = 'flex';
+
+            if(e.target.value === 'ieee') {
+                ieeeIdRow.style.display = 'grid';
+                ieeeIdInput.required = true;
+                ieeeCardInput.required = true;
+                feeAmountDisplay.textContent = '₹200';
+                feeAmountDisplay.classList.add('discount');
+            } else {
+                ieeeIdRow.style.display = 'none';
+                ieeeIdInput.required = false;
+                ieeeIdInput.value = '';
+                ieeeCardInput.required = false;
+                ieeeCardInput.value = '';
+                feeAmountDisplay.textContent = '₹300';
+                feeAmountDisplay.classList.remove('discount');
+            }
+        });
+
+        // STEP 1: Submit Form -> Show Payment Step
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            // Transition to payment view
+            formSection.style.display = 'none';
+            paymentSection.style.display = 'block';
+            
+            // Sync fee amount to payment page
+            finalPayAmount.textContent = feeAmountDisplay.textContent;
+            
+            // Reset Payment inputs and errors
+            utrInput.value = '';
+            paymentScreenshotInput.value = '';
+            utrError.style.display = 'none';
+            screenshotError.style.display = 'none';
+        });
+
+        // Back to Form Button
+        backToFormBtn.addEventListener('click', () => {
+            paymentSection.style.display = 'none';
+            formSection.style.display = 'block';
+        });
+
+        // STEP 2: Verify Payment Details Button Click
+        verifyPaymentBtn.addEventListener('click', () => {
+            const utrValue = utrInput.value.trim();
+            let isValid = true;
+            
+            // Basic Validation for UTR
+            if (utrValue.length < 5) {
+                utrError.style.display = 'block';
+                isValid = false;
+            } else {
+                utrError.style.display = 'none';
+            }
+
+            // Validation for Screenshot
+            if (!paymentScreenshotInput.files || paymentScreenshotInput.files.length === 0) {
+                screenshotError.style.display = 'block';
+                isValid = false;
+            } else {
+                screenshotError.style.display = 'none';
+            }
+            
+            // Stop if validation fails
+            if (!isValid) return;
+            
+            // Open Warning Modal
+            warningModal.classList.add('show');
+        });
+
+        // Close Warning Modal (Cancel Button)
+        function closeWarningModal() {
+            warningModal.classList.remove('show');
+        }
+
+        // STEP 3: Confirm Final Submit ("Sure, submit" Button)
+       async function confirmFinalSubmit() {
+    // Hide warning modal
+    warningModal.classList.remove('show');
+
+    const formData = new FormData();
+
+    // Get form values
+    formData.append("name", document.querySelector("input[type=text]").value);
+    formData.append("email", document.querySelector("input[type=email]").value);
+    formData.append("phone", document.querySelector("input[type=tel]").value);
+    formData.append("utr", utrInput.value);
+
+    // Files
+    if (ieeeCardInput.files[0]) {
+        formData.append("ieee_card", ieeeCardInput.files[0]);
+    }
+
+    formData.append("payment_screenshot", paymentScreenshotInput.files[0]);
+
+    try {
+        const response = await fetch("http://localhost:5000/upload", {
+            method: "POST",
+            body: formData
+        });
+
+        const result = await response.json();
+        console.log(result);
+
+        // Show success only AFTER saving
+        successModal.classList.add('show');
+
+    } catch (error) {
+        alert("Error uploading data");
+        console.error(error);
+    }
+}
+
+        // Close Success Modal
+        function closeSuccessModal() {
+            successModal.classList.remove('show');
+        }
+
+        // Close modals if clicked outside
+        warningModal.addEventListener('click', (e) => {
+            if(e.target === warningModal) closeWarningModal();
+        });
+        
+        successModal.addEventListener('click', (e) => {
+            if(e.target === successModal) closeSuccessModal();
+        });
+    </script>
+</body>
+</html>
