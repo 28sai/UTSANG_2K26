@@ -4,7 +4,7 @@ import sqlite3
 import uuid
 from werkzeug.utils import secure_filename
 from flask_cors import CORS
-
+from flask import send_from_directory
 app = Flask(__name__)
 CORS(app)
 
@@ -84,11 +84,13 @@ def save_to_db(name, email, utr, ieee_path, screenshot_path):
     conn.close()
 @app.route("/files")
 def list_files():
-    try:
-        files = os.listdir("uploads")
-        return {"files": files}
-    except Exception as e:
-        return {"error": str(e)}
+    files = os.listdir("uploads")
+    links = [f"/uploads/{file}" for file in files]
+    return {"files": links}
+    
+@app.route("/uploads/<filename>")
+def uploaded_file(filename):
+    return send_from_directory("uploads", filename)
 
 # ✅ RUN SERVER
 if __name__ == "__main__":
