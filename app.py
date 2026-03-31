@@ -57,7 +57,9 @@ def upload():
 
     except Exception as e:
         return jsonify({"status": "error", "message": str(e)}), 500
-
+@app.route("/files")
+def list_files():
+    return {"files": os.listdir("uploads")}
 
 # ✅ DATABASE FUNCTION
 def save_to_db(name, email, utr, ieee_path, screenshot_path):
